@@ -1,0 +1,106 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    /* Adiciona um padding no topo para o conteúdo não ficar atrás do menu fixo */
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background-image: url('imagens/fundo-preto.jpg');
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa durante a rolagem */
+    color: #f0f0f0; /* Cor de texto padrão para boa leitura em fundos escuros */
+}
+
+header {
+    background-color: #d84b4b;
+    padding: 10px 0;
+    position: fixed; /* Fixa o menu no topo da janela */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centraliza os itens do menu */
+}
+
+nav ul li {
+    display: inline-block; /* Exibe os itens da lista na mesma linha */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.hero-section {
+    /* A propriedade flex: 1 faz esta seção crescer e ocupar o espaço disponível */
+    flex: 1;
+    
+    /* Usamos flexbox aqui também para centralizar o conteúdo interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Adiciona uma sobreposição escura para garantir a legibilidade do texto */
+    /* Isso é opcional se a imagem de fundo já for escura o suficiente */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: white;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+}
+
+.site-footer {
+    background-color: #d84b4b;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.profile-pic {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #333;
+}
+
