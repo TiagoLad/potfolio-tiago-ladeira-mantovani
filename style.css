@@ -57,6 +57,27 @@ nav ul li a:hover {
     padding-left: 35px; /* Efeito de indentação no hover */
 }
 
+/* --- Estilos para o Menu Hambúrguer (Mobile) --- */
+.menu-toggle-checkbox {
+    /* Oculta a caixa de seleção real, a mágica é feita pelo label */
+    display: none;
+}
+
+.menu-toggle-label {
+    display: none; /* Fica oculto em telas grandes */
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001; /* Garante que fique acima da barra lateral quando ela aparecer */
+    font-size: 1.8rem;
+    color: white;
+    background-color: rgba(40, 40, 40, 0.8);
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
 .hero-section {
     /* A propriedade flex: 1 faz esta seção crescer e ocupar o espaço disponível */
     flex: 1;
@@ -83,6 +104,11 @@ nav ul li a:hover {
     color: white;
     margin-top: 10px;
     text-align: justify;
+}
+
+main {
+    margin-left: 250px; /* Espaço para a barra lateral */
+    flex-grow: 1;
 }
 
 .site-footer {
@@ -117,6 +143,7 @@ nav ul li a:hover {
     margin-right: auto;
 }
 
+
 /* --- Estilos para a página "Sobre Mim" / Conteúdo Principal --- */
 .about-container {
     /* A MÁGICA ACONTECE AQUI: Fundo escuro semi-transparente */
@@ -149,41 +176,26 @@ nav ul li a:hover {
         flex-direction: column; /* Empilha a imagem e o texto */
         text-align: center;
     }
-    
+
+    .menu-toggle-label {
+        display: block; /* Mostra o botão do menu em telas pequenas */
+    }
+
     header {
-        width: 100%;
-        height: auto;
-        padding: 10px 0;
+        /* Por padrão, o menu fica escondido fora da tela */
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Quando o checkbox é marcado (pelo clique no label), o menu desliza para a tela */
+    .menu-toggle-checkbox:checked ~ header {
+        transform: translateX(0);
     }
 
     main,
     .site-footer {
         margin-left: 0; /* Remove a margem lateral para o conteúdo ocupar a tela toda */
     }
-
-    nav ul {
-        text-align: center;
-    }
-
-    nav ul li {
-        display: inline-block; /* Itens voltam a ficar lado a lado */
-        margin: 0 10px;
-    }
-
-    nav ul li a {
-        padding: 5px 10px;
-    }
-
-    nav ul li a:hover {
-        background-color: #555;
-        border-radius: 5px;
-        padding-left: 10px; /* Reseta o efeito de indentação do hover */
-    }
 }
 
 /* --- Solução para o Rodapé Fixo (Sticky Footer) --- */
-
-main {
-    margin-left: 250px; /* Espaço para a barra lateral */
-    flex-grow: 1;
-}
