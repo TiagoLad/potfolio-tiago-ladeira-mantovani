@@ -146,7 +146,6 @@ main {
 
 /* --- Estilos para a página "Sobre Mim" / Conteúdo Principal --- */
 .about-container {
-    /* A MÁGICA ACONTECE AQUI: Fundo escuro semi-transparente */
     background-color: rgba(20, 20, 20, 0.75); /* Fundo quase preto e 75% opaco para ótima legibilidade */
     
     padding: 30px;
