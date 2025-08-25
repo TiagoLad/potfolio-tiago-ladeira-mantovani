@@ -9,8 +9,6 @@ html {
 body {
     font-family: sans-serif;
     margin: 0;
-    /* Adiciona um padding no topo para o conteúdo não ficar atrás do menu fixo */
-    padding-top: 60px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -25,9 +23,10 @@ body {
 
 header {
     background-color: #d84b4b;
-    padding: 10px 0;
+    padding: 20px 0;
     position: fixed; /* Fixa o menu no topo da janela */
-    width: 100%;
+    width: 250px; /* Largura da barra lateral */
+    height: 100vh; /* Altura total da tela */
     top: 0;
     left: 0;
     z-index: 1000;
@@ -37,25 +36,25 @@ nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
     margin: 0;
     padding: 0;
-    text-align: center; /* Centraliza os itens do menu */
 }
 
 nav ul li {
-    display: inline-block; /* Exibe os itens da lista na mesma linha */
-    margin: 0 15px;
+    /* Cada item agora é um bloco, um embaixo do outro */
+    display: block;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none; /* Remove o sublinhado dos links */
-    font-size: 18px;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
+    font-size: 1.1rem;
+    display: block; /* Faz o link ocupar todo o espaço do <li> */
+    padding: 15px 25px; /* Mais espaçamento vertical */
+    transition: background-color 0.3s, padding-left 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #555;
-    border-radius: 5px;
+    background-color: #a73a3a; /* Um tom de vermelho mais escuro para o hover */
+    padding-left: 35px; /* Efeito de indentação no hover */
 }
 
 .hero-section {
@@ -91,6 +90,7 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 20px 0;
+    margin-left: 250px; /* Espaço para a barra lateral */
 }
 
 .site-footer p {
@@ -115,4 +115,75 @@ nav ul li a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* --- Estilos para a página "Sobre Mim" / Conteúdo Principal --- */
+.about-container {
+    /* A MÁGICA ACONTECE AQUI: Fundo escuro semi-transparente */
+    background-color: rgba(20, 20, 20, 0.75); /* Fundo quase preto e 75% opaco para ótima legibilidade */
+    
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px auto; /* Espaçamento entre seções e centralização */
+    max-width: 960px;  /* Largura máxima para melhor leitura em telas grandes */
+    width: 90%;        /* Largura responsiva */
+
+    /* Layout para alinhar imagem e texto */
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espaço entre a imagem e o texto */
+}
+
+.about-text {
+    flex: 1; /* Faz o container de texto ocupar o espaço restante */
+}
+
+.about-text h2 {
+    margin-top: 0;
+    color: #d84b4b; /* Usa a cor de destaque do site para os títulos */
+}
+
+/* Deixa o layout responsivo para celulares */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Empilha a imagem e o texto */
+        text-align: center;
+    }
+    
+    header {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    main,
+    .site-footer {
+        margin-left: 0; /* Remove a margem lateral para o conteúdo ocupar a tela toda */
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block; /* Itens voltam a ficar lado a lado */
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+    }
+
+    nav ul li a:hover {
+        background-color: #555;
+        border-radius: 5px;
+        padding-left: 10px; /* Reseta o efeito de indentação do hover */
+    }
+}
+
+/* --- Solução para o Rodapé Fixo (Sticky Footer) --- */
+
+main {
+    margin-left: 250px; /* Espaço para a barra lateral */
+    flex-grow: 1;
 }
