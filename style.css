@@ -196,5 +196,20 @@ main {
         margin-left: 0; /* Remove a margem lateral para o conteúdo ocupar a tela toda */
     }
 }
+   /* Estilos para espaçamento do formulário */
+        .form-group label {
+            display: block; /* Faz com que cada label ocupe uma linha inteira */
+            margin-top: 1em; /* Adiciona espaço (margem) acima de cada label */
+        }
 
-/* --- Solução para o Rodapé Fixo (Sticky Footer) --- */
+        .form-group input,
+        .form-group textarea,
+        .form-group a {
+            display: block; /* Garante que os campos e links também fiquem em suas próprias linhas */
+            margin-top: 0.25em; /* Adiciona um pequeno espaço entre o label e o campo/link */
+        }
+
+        /* Remove a margem do topo do primeiro label para um alinhamento melhor */
+        .form-group label:first-of-type {
+            margin-top: 0;
+        }
