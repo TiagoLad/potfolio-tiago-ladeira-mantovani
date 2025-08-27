@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 
-    background-image: url('imagens/fundo-preto.jpg');
+    background-image: url('../imagens/fundo-preto.jpg');
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-position: center; /* Centraliza a imagem */
@@ -59,7 +59,7 @@ nav ul li a:hover {
 
 /* --- Estilos para o Menu Hambúrguer (Mobile) --- */
 .menu-toggle-checkbox {
-    /* Oculta a caixa de seleção real, a mágica é feita pelo label */
+    /* Oculta a caixa de seleção real, realizado pela tag label */
     display: none;
 }
 
