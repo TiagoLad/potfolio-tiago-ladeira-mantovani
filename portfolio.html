@@ -9,7 +9,7 @@
 </head>
 <body>
   <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
-  <label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+  <label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir ou fechar menu" title="Menu">&#9776;</label>
     <header>
         <nav>
             <ul>
@@ -21,55 +21,75 @@
             </ul>
         </nav>
     </header>
-    <main id="portfolio" class="page-content">
-        <div class="about-container">
-             <div class="about-text">
-                <h1 class="hero-section h1">Portfólio</h1>
-                <h2 class="hero-section h2">Projeto | Rollout: Sistema criado para gerar formulários</h2>
-                <figure>
-                <img src="imagens/Tela_Login.jpg" alt="Projeto | Rollout: Sistema criado para gerar formulários" class="profile-pic-portfolio">
-                <figcaption><center>Tela de login</center></figcaption>
-                </figure>
-                  <p class="hero-section p">
-                   O projeto Rollout foi desenvolvido quando eu trabalhei na empresa Algar Tech. Esse sistema <br>
-                   foi criado para automatizar a criação de formulários que antes eram criados por planilhas.<br><br>
-                   Com esse sistema foi possível a criação da documentação de retirada de computadores, checklist<br>
-                   de softwares e demais documentações pertinentes para o rollout dos computadores e softwares.<br><br>
-                   O sistema de criação de formulários foi desenvolvido utilizando as seguintes tecnologias: <br>                  
-                   PHP, BootStrap, JavaScript e Mysql.
-                </p>
-                <p class="hero-section p">                
-                 <figure>
-                 <img src="imagens/Menu_Principal.jpg" alt="Projeto | Rollout: Sistema criado para gerar formulários" class="profile-pic-portfolio">
-                 <figcaption><center>Menu principal</center></figcaption>
-                 </figure>
-                  <p class="hero-section p">
-                   Esse é o menu principal do sistema, onde é possível acessar as documentações. E as fases <br>
-                   do projeto do rollout.<br>
-                </p>         
-                <figure>
-                 <img src="imagens/Tela_Principal.jpg" alt="Projeto | Rollout: Sistema criado para gerar formulários" class="profile-pic-portfolio">
-                 <figcaption><center>Tela Principal</center></figcaption>
-                </figure>
-                <p class="hero-section p">
-                   Essa é a tela principal do sistema, onde é exibido o nome do projeto e o período que está sendo<br>
-                   realizado o projeto, que no caso foi entre os anos de 2019 e 2020.<br><br> 
 
-                 <figure>  
-                 <h2 class="hero-section h2">Agenda | Atualização de layout</h2>
-                 <img src="imagens/agenda-novo-visual.jpeg" alt="atualização de layout" class="profile-pic-portfolio">
-                 <figcaption><center>Lista de agendamentos</center></figcaption>
-                 </figure> 
-                <p class="hero-section p">
-                   Recentemente atualizei a parte visual da lista de um sistema de agendamentos, da faculdade<br>
-                   onde trabalho atualmente. Para atualizar a página utilizei a linguagem PHP, linguagem essa <br>
-                   que o sistema foi desenvolvido, JavaScript, HTML5 e CSS.<br> 
-                
+    <main id="portfolio" class="page-content">
+        <section class="about-container portfolio-container">
+            <div class="about-text">
+                <h1>Portfólio</h1>
+                <p>Alguns projetos e melhorias em sistemas que desenvolvi ou participei, com foco em automação, organização de processos e desenvolvimento web.</p>
+
+                <article class="project-card">
+                    <h2>BuscaCEP - Consulta de endereços</h2>
+                    <p>Site desenvolvido para consultar endereços a partir de um CEP informado pelo usuário, com preenchimento automático dos dados retornados pela API. O projeto também permite busca por rua, cidade e UF.</p>
+                    <ul class="content-list">
+                        <li>Consulta de endereço por CEP usando BrasilAPI.</li>
+                        <li>Busca por rua, cidade e UF usando ViaCEP.</li>
+                        <li>Carregamento de estados e cidades com dados do IBGE.</li>
+                        <li>Interface responsiva com campos de formulário e botões de busca.</li>
+                    </ul>
+                    <p class="tech-list"><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript ES6, Fetch API, BrasilAPI, ViaCEP e API de localidades do IBGE.</p>
+                    <p>
+                        <a class="project-link" href="https://tiagolad.github.io/buscaCEP/" target="_blank" rel="noopener noreferrer">Acessar BuscaCEP</a>
+                    </p>
+
+                    <figure>
+                        <img src="imagens/buscacep.png" alt="Tela do site BuscaCEP" class="profile-pic-portfolio">
+                        <figcaption>Tela do BuscaCEP</figcaption>
+                    </figure>
+                </article>
+
+                <article class="project-card">
+                    <h2>Rollout - Sistema para geração de formulários</h2>
+                    <p>Projeto desenvolvido durante minha atuação na Algar Tech para automatizar a criação de documentações que antes eram feitas por planilhas.</p>
+                    <ul class="content-list">
+                        <li>Criação de documentos de retirada de computadores.</li>
+                        <li>Geração de checklists de softwares.</li>
+                        <li>Organização de documentações do processo de rollout.</li>
+                    </ul>
+                    <p class="tech-list"><strong>Tecnologias:</strong> PHP, Bootstrap, JavaScript e MySQL.</p>
+
+                    <div class="project-gallery">
+                        <figure>
+                            <img src="imagens/Tela_Login.jpg" alt="Tela de login do sistema Rollout" class="profile-pic-portfolio">
+                            <figcaption>Tela de login</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="imagens/Menu_Principal.jpg" alt="Menu principal do sistema Rollout" class="profile-pic-portfolio">
+                            <figcaption>Menu principal</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="imagens/Tela_Principal.jpg" alt="Tela principal do sistema Rollout" class="profile-pic-portfolio">
+                            <figcaption>Tela principal</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h2>Agenda - Atualização de layout</h2>
+                    <p>Atualização visual da lista de agendamentos de um sistema utilizado na faculdade onde trabalho atualmente.</p>
+                    <p class="tech-list"><strong>Tecnologias:</strong> PHP, JavaScript, HTML5 e CSS.</p>
+
+                    <figure>
+                        <img src="imagens/agenda-novo-visual.jpeg" alt="Lista de agendamentos com novo layout" class="profile-pic-portfolio">
+                        <figcaption>Lista de agendamentos</figcaption>
+                    </figure>
+                </article>
             </div>
-        </div>
+        </section>
     </main>
+
    <footer class="site-footer">
         <p>&copy; 2025 | TFLM | UNINTER</p>
     </footer>
-</body> 
-</html> 
+</body>
+</html>
