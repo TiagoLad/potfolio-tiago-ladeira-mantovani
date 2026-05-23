@@ -285,7 +285,18 @@ main {
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column; /* Empilha a imagem e o texto */
+        text-align: left;
+    }
+
+    .about-text h1,
+    .about-text h2,
+    .project-card figcaption {
         text-align: center;
+    }
+
+    .about-text p,
+    .content-list {
+        text-align: left;
     }
 
     main,
