@@ -3,32 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+    <title>Projetos | Tiago Ladeira Mantovani</title>
+    <meta name="description" content="Conheça meus projetos de inteligência artificial, gestão financeira, desenvolvimento web e automação: I-LLOPY AI, OpyZin e outras soluções.">
     <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/portfolio.css?v=1">
     <link rel="shortcut icon" href="icon/curriculo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/navigation.css?v=1">
+    <script src="js/navigation.js?v=1" defer></script>
 </head>
-<body>
-  <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
-  <label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir ou fechar menu" title="Menu">&#9776;</label>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobremim.html">Sobre mim</a></li>
-                <li><a href="formacao.html">Formação</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="contato.html">Contato</a></li>
+<body class="portfolio-page">
+    <a class="skip-link" href="#portfolio">Pular para o conteúdo</a>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Navegação principal">
+            <a class="site-brand" href="index.html" aria-label="Tiago Ladeira, página inicial">
+                <span class="site-brand-mark" aria-hidden="true">TM</span>
+                <span class="site-brand-name">Tiago Ladeira<small>Tecnologia &amp; desenvolvimento</small></span>
+            </a>
+            <button class="site-menu-button" type="button" aria-expanded="false" aria-controls="site-navigation">
+                <span data-menu-icon aria-hidden="true">☰</span><span data-menu-label>Menu</span>
+            </button>
+            <ul class="site-nav-links" id="site-navigation">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobremim.html">Sobre mim</a></li>
+                    <li><a href="formacao.html">Formação</a></li>
+                    <li><a href="portfolio.html" aria-current="page">Portfólio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="portfolio" class="page-content">
-        <section class="about-container portfolio-container">
+    <main id="portfolio" tabindex="-1" class="page-content">
+        <section class="portfolio-container">
             <div class="about-text">
-                <h1>Portfólio</h1>
-                <p>Projetos e melhorias em sistemas que desenvolvi ou participei, com foco em automação, organização de processos, desenvolvimento web, SEO técnico e performance.</p>
+                <p class="hero-kicker">Tiago Ladeira Mantovani / Portfólio</p>
+                <h1>Ideias que viram<br><span>soluções digitais.</span></h1>
+                <p>Da inteligência artificial à organização das finanças: conheça os projetos que desenvolvi para simplificar tarefas, conectar informações e melhorar experiências.</p>
+                <div class="portfolio-intro-actions">
+                    <a class="project-link" href="#projetos-recentes">Explorar projetos <span aria-hidden="true">↘</span></a>
+                    <a class="portfolio-text-link" href="https://github.com/TiagoLad" target="_blank" rel="noopener noreferrer">Meu GitHub <span aria-hidden="true">↗</span></a>
+                </div>
+                <ul class="portfolio-topics" aria-label="Áreas de atuação">
+                    <li>Inteligência artificial</li><li>Desenvolvimento web</li><li>Automação</li>
+                </ul>
+            </div>
 
+            <div class="portfolio-section-heading" id="projetos-recentes">
+                <div><p class="hero-kicker">Em destaque</p><h2>Trabalhos recentes</h2></div>
+                <p>IA aplicada e finanças na prática.</p>
+            </div>
+            <div class="project-grid">
+                <article class="project-card" id="catalogo-ia">
+                    <div class="project-cover project-cover-ai" aria-hidden="true">
+                        <span class="cover-eyebrow">CATÁLOGO + INTELIGÊNCIA ARTIFICIAL</span>
+                        <span class="cover-brand">I-LLOPY<span>AI</span></span>
+                        <span class="cover-flow">Documentos <span>→</span> Busca semântica <span>→</span> Respostas</span>
+                    </div>
+                    <p class="hero-kicker">Projeto recente · Inteligência artificial</p>
+                    <h2>I-LLOPY AI - Catálogo com assistente de IA</h2>
+                    <p>Catálogo online responsivo com um assistente de inteligência artificial que responde dúvidas dos clientes a partir dos documentos da loja, integrando a experiência de e-commerce a uma API própria.</p>
+                    <ul class="content-list">
+                        <li>Chat integrado ao catálogo com respostas em português e indicação das fontes consultadas.</li>
+                        <li>Arquitetura RAG com processamento de PDFs, embeddings e busca semântica em índice vetorial FAISS.</li>
+                        <li>Integração com Google Gemini para gerar respostas contextualizadas sobre entregas, trocas e políticas da loja.</li>
+                        <li>Frontend no GitHub Pages e backend na Oracle Cloud Infrastructure, com Nginx e HTTPS.</li>
+                    </ul>
+                    <p class="tech-list"><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript, Python, FastAPI, Google Gemini, Sentence Transformers, FAISS, PyPDF, OCI e Nginx.</p>
+                    <div class="project-actions">
+                        <a class="project-link" href="https://tiagolad.github.io/catalogo_i-lopy/" target="_blank" rel="noopener noreferrer">Acessar catálogo com IA</a>
+                        <a class="project-link project-link-secondary" href="https://github.com/TiagoLad/catalogo_i-lopy" target="_blank" rel="noopener noreferrer">Ver código <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+
+                <article class="project-card" id="opyzin">
+                    <div class="project-cover project-cover-finance" aria-hidden="true">
+                        <span class="cover-eyebrow">FINANÇAS PESSOAIS + PWA</span>
+                        <span class="cover-brand">Opy<span>Zin</span></span>
+                        <span class="cover-flow">Organizar. Acompanhar. Planejar.</span>
+                    </div>
+                    <p class="hero-kicker">Projeto recente · Gestão financeira</p>
+                    <h2>OpyZin - Gestão financeira pessoal</h2>
+                    <p>Aplicação web para organizar as finanças pessoais, acompanhar receitas e despesas e planejar metas de economia. Desenvolvida com foco em dispositivos móveis e instalação como PWA.</p>
+                    <ul class="content-list">
+                        <li>Dashboard com gráficos, saldo, comparação mensal e despesas por categoria.</li>
+                        <li>Gestão de contas, cartões, receitas, despesas e contas recorrentes com lembretes de vencimento.</li>
+                        <li>Metas mensais de economia e exportação dos dados em CSV e Excel.</li>
+                        <li>Autenticação em duas etapas, dados separados por usuário e sincronização entre dispositivos.</li>
+                    </ul>
+                    <p class="tech-list"><strong>Tecnologias:</strong> TypeScript, Vite, PWA, Cloudflare Pages, Pages Functions e banco de dados Cloudflare D1.</p>
+                    <div class="project-actions">
+                        <a class="project-link" href="https://meus-gastos-e9l.pages.dev/" target="_blank" rel="noopener noreferrer">Acessar OpyZin</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="portfolio-section-heading">
+                <div><p class="hero-kicker">Mais experiências</p><h2>Outros projetos</h2></div>
+                <p>Web, integrações e melhorias de processos.</p>
+            </div>
+            <div class="project-grid project-grid-other">
                 <article class="project-card">
+                    <p class="hero-kicker">Web · SEO e performance</p>
                     <h2>Portal Bolso Digital - Plataforma web</h2>
                     <p>Desenvolvimento e manutenção de plataforma web responsiva focada em simuladores financeiros e conteúdo digital.</p>
                     <ul class="content-list">
@@ -49,6 +124,7 @@
                 </article>
 
                 <article class="project-card">
+                    <p class="hero-kicker">Integrações · APIs públicas</p>
                     <h2>BuscaCEP - Consulta de endereços</h2>
                     <p>Site desenvolvido para consultar endereços a partir de um CEP informado pelo usuário, com preenchimento automático dos dados retornados pela API. O projeto também permite busca por rua, cidade e UF.</p>
                     <ul class="content-list">
@@ -69,6 +145,7 @@
                 </article>
 
                 <article class="project-card">
+                    <p class="hero-kicker">Automação · Processos internos</p>
                     <h2>Rollout - Sistema para geração de formulários</h2>
                     <p>Projeto desenvolvido durante minha atuação na Algar Tech para automatizar a criação de documentações que antes eram feitas por planilhas.</p>
                     <ul class="content-list">
@@ -94,17 +171,32 @@
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <h2>Agenda - Atualização de layout</h2>
-                    <p>Atualização visual da lista de agendamentos de um sistema utilizado na faculdade onde trabalho atualmente.</p>
-                    <p class="tech-list"><strong>Tecnologias:</strong> PHP, JavaScript, HTML5 e CSS.</p>
+                <article class="project-card project-card-agenda" id="agenda">
+                    <p class="hero-kicker">Interface · Experiência do usuário</p>
+                    <h2>Agenda - Redesign da reserva de salas</h2>
+                    <p>Atualização do layout da lista de agendamentos de um sistema utilizado na faculdade onde trabalho, com foco na apresentação das reservas e na leitura das informações do dia.</p>
 
-                    <figure>
-                        <img src="imagens/agenda-novo-visual.jpeg" alt="Lista de agendamentos com novo layout" class="profile-pic-portfolio">
-                        <figcaption>Lista de agendamentos</figcaption>
+                    <figure class="agenda-preview">
+                        <a href="imagens/agenda-novo-visual.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Ampliar tela da agenda de reserva de salas (abre em nova aba)">
+                            <img src="imagens/agenda-novo-visual.jpeg" alt="Tela de reserva de salas com tabela de horários, locais, cursos, disciplinas e professores" class="profile-pic-portfolio" loading="lazy" decoding="async" width="1440" height="773">
+                            <span class="agenda-preview-label">Ampliar imagem <span aria-hidden="true">↗</span></span>
+                        </a>
+                        <figcaption>Visão da lista de reservas com o layout atualizado.</figcaption>
                     </figure>
+
+                    <h3 class="agenda-details-title">Destaques da interface</h3>
+                    <ul class="content-list">
+                        <li>Horários e salas organizados em uma tabela para consulta dos agendamentos.</li>
+                        <li>Linhas alternadas e cabeçalhos para facilitar a leitura de cada reserva.</li>
+                        <li>Curso, disciplina, professor e observações reunidos na mesma visualização.</li>
+                    </ul>
+                    <p class="tech-list"><strong>Tecnologias:</strong> PHP, JavaScript, HTML5 e CSS.</p>
                 </article>
             </div>
+            <aside class="portfolio-contact" aria-labelledby="portfolio-contact-title">
+                <div><p class="hero-kicker">Vamos conversar</p><h2 id="portfolio-contact-title">Tem um projeto em mente?</h2><p>Entre em contato para conversar sobre desenvolvimento, automação e soluções digitais.</p></div>
+                <a class="project-link" href="contato.html">Entrar em contato <span aria-hidden="true">↗</span></a>
+            </aside>
         </section>
     </main>
 
